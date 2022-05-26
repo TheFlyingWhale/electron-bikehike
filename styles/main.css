@@ -1,0 +1,342 @@
+:root {
+    --primary-default: #3064e7;
+    --primary-darker: #1b3882;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.topBar {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-app-region: drag;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.topBarTitle {
+    font-family: Overpass;
+    color: var(--primary-darker);
+    font-size: 14px;
+}
+
+#landing {
+    width: 100%;
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.landingHidden {
+    display: none;
+    opacity: 0;
+    top: 100% !important;
+}
+
+@keyframes hideLanding {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes showLanding {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+#map {
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 0;
+}
+
+#mapOverlay {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+#mapOverlay * {
+    pointer-events: auto;
+}
+
+.mapOverlayTint {
+    pointer-events: auto !important;
+}
+
+#mapOverlayDetailsContainer {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+#menuButton {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 30px rgba(25, 25, 25, 0.15);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#menuButton:hover {
+    border: 2px solid var(--primary-default);
+}
+
+.marker:hover {
+    cursor: pointer;
+}
+
+#locationDetails {
+    width: 300px;
+    height: fit-content;
+
+    padding: 15px;
+    padding-bottom: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+    box-shadow: 0px 5px 30px rgba(25, 25, 25, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.locationDetailTopContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeLocationDetailsButton {
+    background-color: white;
+    border: none;
+    width: 14px;
+    height: 14px;
+    background-image: url("../assets/svg/iconCloseDefault.svg");
+    cursor: pointer;
+}
+
+.closeLocationDetailsButton:hover {
+    background-image: url("../assets/svg/iconCloseHover.svg");
+}
+
+.closeLocationDetailsButton:active {
+    background-image: url("../assets/svg/iconCloseActive.svg");
+}
+
+.locationDetailAddressContainer  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.locationDetailAddress {
+    font-family: Overpass;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-darker);
+}
+
+.informationContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 25px;
+}
+
+.detailsContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.detailIcon {
+    height: 25px;
+}
+
+.detailTitle {
+    font-family: Overpass;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-darker);
+}
+
+.detailData {
+    font-family: Overpass;
+    font-size: 25.63px;
+    font-weight: 600;
+    color: var(--primary-darker);
+}
+
+#app {
+    position: relative;
+    overflow: hidden;
+}
+
+.landButtContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.button {
+    width: 100%;
+    max-width: 325px;
+    height: 50px;
+    background-color: var(--primary-default);
+    color: white;
+    border: 3px solid var(--primary-default);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.button > svg > path {
+    fill: currentColor;
+}
+
+.button p {
+    font-family: Overpass;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: white;
+    color: var(--primary-default);
+    cursor: pointer;
+}
+
+.button:active {
+    border-color: var(--primary-darker);
+    background-color: var(--primary-default);
+    color: var(--primary-darker);
+}
+
+/* .buttIcon {
+    fill: orange;
+} */
+
+.weatherContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.weatherAndNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.weatherCityTitle {
+    font-size: 51.96px;
+    font-family: Overpass;
+    font-weight: 700;
+    color: var(--primary-default);
+}
+
+.weatherInformationTitle {
+    font-size: 16px;
+    font-family: Overpass;
+    font-weight: 400;
+    color: var(--primary-default);
+}
+
+.weatherInformationDetail {
+    font-size: 20.25px;
+    font-family: Overpass;
+    font-weight: 700;
+    color: var(--primary-default);
+}
+
+.weatherInformationDetailContainer {
+    width: 54px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.weatherInformationContainer {
+    display: flex;
+    gap: 25px;
+}
