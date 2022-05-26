@@ -1,23 +1,23 @@
 @font-face {
-    font-family: 'Overpass';
-    src: url('/assets/fonts/Overpass-Regular.ttf');
+    font-family: "Overpass";
+    src: url("../assets/fonts/Overpass-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Overpass';
-    src: url('/assets/fonts/Overpass-Medium.ttf');
+    font-family: "Overpass";
+    src: url("../assets/fonts/Overpass-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
     font-family: Overpass;
-    src: url('/assets/fonts/Overpass-SemiBold.ttf');
+    src: url("../assets/fonts/Overpass-SemiBold.ttf");
     font-weight: 600;
 }
 
 @font-face {
-    font-family: 'Overpass';
-    src: url('/assets/fonts/Overpass-Bold.ttf');
+    font-family: "Overpass";
+    src: url("../assets/fonts/Overpass-Bold.ttf");
     font-weight: 700;
 }

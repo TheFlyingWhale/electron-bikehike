@@ -2,7 +2,6 @@
 
 # BikeHike - Electron application
 
-A SPA using vanilla JavaScript and public API's to display information regarding weather and bike availability in Oslo
 A Electron application wrapping a vanilla JavaScript SPA
 
 ## Distribution
