@@ -1,4 +1,4 @@
-![BikeHike Icon](https://github.com/TheFlyingWhale/electron-bikehike/blob/main/build/icon.png)
+![BikeHike Icon](https://github.com/TheFlyingWhale/electron-bikehike/blob/main/build/icon256.png)
 
 # BikeHike - Electron application
 
