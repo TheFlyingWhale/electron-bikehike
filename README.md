@@ -2,7 +2,7 @@
 
 # BikeHike - Electron application
 
-A Electron application wrapping a vanilla JavaScript SPA
+Electron application wrapping a vanilla JavaScript SPA
 
 ## Distribution
 
